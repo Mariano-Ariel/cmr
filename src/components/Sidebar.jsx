@@ -30,6 +30,16 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink
+              to="/clientes/ver"
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : styles.link
+              }
+            >
+              Ver Clientes
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/chat"
               className={({ isActive }) =>
                 isActive ? styles.linkActive : styles.link
