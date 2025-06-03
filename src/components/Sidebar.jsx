@@ -21,6 +21,7 @@ export default function Sidebar() {
           <li>
             <NavLink
               to="/clientes"
+              end
               className={({ isActive }) =>
                 isActive ? styles.linkActive : styles.link
               }
@@ -46,6 +47,16 @@ export default function Sidebar() {
               }
             >
               Chat IA
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : styles.link
+              }
+            >
+              Login
             </NavLink>
           </li>
         </ul>

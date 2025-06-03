@@ -1,0 +1,70 @@
+/* src/styles/Login.module.css */
+
+/* Ajustamos la altura a 90vh */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #0d1117;
+}
+
+/* Formulario */
+.form {
+  background-color: #161b22;
+  padding: 2rem;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+.title {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #c9d1d9;
+  text-align: center;
+}
+
+/* Etiquetas */
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* Inputs (Correo y Contraseña) */
+.input {
+  width: 100%;
+  padding: 0.5rem 0rem;
+  margin-bottom: 1rem;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.input::placeholder {
+  color: #8b949e;
+}
+
+/* Botón de envío */
+.button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background-color: #238636;
+  color: #ffffff;
+  border: 1px solid #238636;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #2ea043;
+}

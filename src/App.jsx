@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Clients from './pages/Clients';
 import ViewClients from './pages/ViewClients';
 import Chat from './pages/Chat';
+import Login from './pages/Login';
 
 import styles from './styles/App.module.css';
 
@@ -25,6 +26,7 @@ export default function App() {
               {/* pagina para ver clientes en local storage, cambiar a futuro */}
               <Route path="/clientes/ver" element={<ViewClients />} />
               <Route path="/chat" element={<Chat />} />
+              <Route path="/login" element={<Login />} />  {/* por ahora solo vista para login, necesitamos añadir funcionalidad */}
             </Routes>
           </div>
         </div>
