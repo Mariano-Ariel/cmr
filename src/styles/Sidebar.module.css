@@ -1,37 +1,72 @@
+/* Contenedor lateral */
 .sidebar {
   width: 220px;
-  background-color: #161b22;
-  color: #c9d1d9;
-  padding: 1rem;
+  background-color: #242424; /* color de fondo fijo */
+  color: #e0e0e0;            /* color de texto */
+  padding: 24px 16px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #30363d;
+  height: 100vh;
 }
 
-.logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  color: #ffffff;
-  text-align: center;
-}
-
-nav ul {
+/* Reset de la lista */
+.sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-nav li {
-  margin-bottom: 1rem;
+/* Espaciado entre elementos */
+.sidebar li + li {
+  margin-top: 16px;
 }
 
-nav a {
-  color: #c9d1d9;
+/* Estilo base de los enlaces */
+.link {
+  display: block;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #e0e0e0;            /* mismo que color de texto */
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-nav a:hover {
-  color: #58a6ff;
+/* Hover para enlace inactivo */
+.link:hover {
+  background-color: #323232; /* gris oscuro para hover */
+  color: #ffffff;            /* texto blanco al pasar el mouse */
+}
+
+/* Enlace activo */
+.linkActive {
+  display: block;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #323232;         /* gris oscuro fijo en activo */
+  color: #ffffff;                    /* texto blanco */
+  border-left: 4px solid #4a90e2;    /* borde izquierdo azul */
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover para enlace activo (ligeramente más oscuro) */
+.linkActive:hover {
+  background-color: #2b2b2b;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 20px 12px;
+  }
+
+  .link,
+  .linkActive {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }

@@ -4,7 +4,12 @@ import styles from '../styles/Topbar.module.css';
 export default function Topbar() {
   return (
     <header className={styles.topbar}>
-      <span>Usuario: Mariano</span>
+      <div>
+        <span style={{ fontWeight: 600, fontSize: '18px' }}>CRM Template</span>
+      </div>
+      <div className={styles.userInfo}>
+        Usuario: Mariano
+      </div>
     </header>
   );
 }

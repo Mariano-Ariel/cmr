@@ -1,0 +1,106 @@
+/* Home.module.css */
+
+/* Contenedor general, fondo oscuro y tipografía */
+.container {
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #e1e4e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Banner de bienvenida */
+.banner {
+  text-align: center;
+  max-width: 600px;
+}
+
+.welcome {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+/* Grid para los enlaces de acceso rápido */
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Tarjeta básica sin fondo gris (transparente) */
+.card {
+  background-color: transparent;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  padding: 24px 16px;
+  text-decoration: none;
+  color: #e1e4e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #555555;
+}
+
+/* Icono grande en cada tarjeta */
+.cardIcon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+/* Título de cada tarjeta */
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+/* Descripción breve */
+.cardDesc {
+  font-size: 12px;
+  color: #bbbbbb;
+  text-align: center;
+}
+
+/* Adaptación móvil */
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 12px;
+  }
+  .welcome {
+    font-size: 28px;
+  }
+  .linksGrid {
+    gap: 16px;
+  }
+  .card {
+    padding: 20px 12px;
+  }
+  .cardIcon {
+    font-size: 32px;
+  }
+  .cardTitle {
+    font-size: 16px;
+  }
+  .cardDesc {
+    font-size: 11px;
+  }
+}

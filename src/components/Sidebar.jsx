@@ -1,16 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from '../styles/Sidebar.module.css';
 
 export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>
-      <h2 className={styles.logo}>Mi CRM</h2>
       <nav>
         <ul>
-          <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/clientes">Clientes</Link></li>
-          <li><Link to="/chat">Chat IA</Link></li>
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : styles.link
+              }
+            >
+              Inicio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/clientes"
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : styles.link
+              }
+            >
+              Clientes
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/chat"
+              className={({ isActive }) =>
+                isActive ? styles.linkActive : styles.link
+              }
+            >
+              Chat IA
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </aside>
