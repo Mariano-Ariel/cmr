@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100%;                    /* Cambiamos a 100% para ocupar toda la altura del viewport */
   background-color: #0d1117;
 }
 
