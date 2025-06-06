@@ -1,13 +1,13 @@
 /* Contenedor lateral */
 .sidebar {
-  width: 220px;
+  width: 200px;
   background-color: #242424; /* color de fondo fijo */
   color: #e0e0e0;            /* color de texto */
   padding: 24px 16px;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 48px);  /* Altura total menos el margen superior */
 }
 
 /* Reset de la lista */
@@ -15,6 +15,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  position:fixed; /* Fija la lista lateral */
 }
 
 /* Espaciado entre elementos */
