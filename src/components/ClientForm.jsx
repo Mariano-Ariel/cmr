@@ -48,6 +48,9 @@ export default function ClientForm({ onSubmit, editingClient, clearEdit }) {
       <input
         type="text"
         placeholder="Nombre"
+        pattern='^[a-zA-ZÀ-ÿ\s]{1,40}$' // Validación: solo letras y espacios, 1 a 40 caracteres
+        title='El nombre solo puede contener letras y espacios, de 1 a 40 caracteres'
+        required // Campo obligatorio
         value={name}                    // Valor controlado por el estado `name`
         onChange={(e) => setName(e.target.value)} // Al cambiar, actualizamos `name`
       />
@@ -55,6 +58,9 @@ export default function ClientForm({ onSubmit, editingClient, clearEdit }) {
       <input
         type="email"
         placeholder="Correo"
+        pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' // Validación de correo electrónico
+        title='Ingrese un correo electrónico válido (ejemplo@ejemplo.com)'
+        required // Campo obligatorio
         value={email}                   // Valor controlado por el estado `email`
         onChange={(e) => setEmail(e.target.value)} // Al cambiar, actualizamos `email`
       />
@@ -67,8 +73,11 @@ export default function ClientForm({ onSubmit, editingClient, clearEdit }) {
       />
 
       <input
-        type="tel"
+        type="text"
         placeholder="Teléfono"
+        pattern='^\+?[0-9\s-]{7,15}$' // Validación: números, espacios y guiones, 7 a 15 caracteres
+        title='Ingrese un número de teléfono válido (7 a 15 dígitos, con o sin +)'
+        inputMode='tel' // Muestra teclado numérico en dispositivos móviles
         value={phone}                   // Valor controlado por el estado `phone`
         onChange={(e) => setPhone(e.target.value)}   // Al cambiar, actualizamos `phone`
       />
